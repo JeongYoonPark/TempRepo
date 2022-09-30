@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <script src="script/main.js"></script> -->
+    <script>
+        function change(e,sel){
+            $(".btn").removeClass("selected");
+            $(sel).addClass("selected");
+            $("#box").html('<source src="video/'+e+'" type="video/mp4" id="video">');
+            $("#box").load();
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <video id="box" muted autoplay loop>
+        <source src="video/test2.mp4" type="video/mp4" id="video">
+    </video>
+    <ul>
+        <li class="btn test1 selected" onclick="change('test1.mp4',this)">1</li>
+        <li class="btn test2" onclick="change('test2.mp4',this)">2</li>
+        <li class="btn test3" onclick="change('test3.mp4',this)">3</li>
+    </ul>
+    <ul>
+        <li class="btn test4" onclick="change('test4.mp4',this)">4</li>
+        <li class="btn test5" onclick="change('test5.mp4',this)">5</li>
+        <li class="btn test6" onclick="change('test6.mp4',this)">6</li>
+    </ul>
+</body>
+</html>
